@@ -1,0 +1,41 @@
+/* Main button style */
+
+.btn-primary {
+  background-color: #28a49a;
+  border-color: #28a49a;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+/* Style when we hover the button */
+
+.btn-primary:hover {
+  background-color: darken(#28a49a, 8%);
+  border-color: darken(#28a49a, 8%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.25);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Style for small btn */
+
+.btn-sm {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+/* Style for medium btn */
+
+.btn-md {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+/* Style for large btn */
+
+.btn-lg {
+  font-size: 16px;
+  padding: 12px 24px;
+}

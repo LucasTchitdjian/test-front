@@ -1,0 +1,21 @@
+/* First event title styling */
+
+.mainText {
+  font-size: 26px;
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  color: #fff;
+  max-width: 240px;
+}
+
+/* Future events text styling*/
+
+.subText {
+  font-size: 18px;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  color: black;
+  max-width: 350px;
+}

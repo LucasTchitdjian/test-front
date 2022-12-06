@@ -1,0 +1,19 @@
+/* Change the color of the map picker in green */
+
+.adresse>svg {
+  margin-right: 0.5rem;
+  color: #28a49a;
+}
+
+/* Set the adress text component in gray */
+
+.adresse.primary {
+  color: gray;
+}
+
+/* Set the second adress text component in white and italic */
+
+.adresse.secondary {
+  color: #fff;
+  font-style: italic;
+}

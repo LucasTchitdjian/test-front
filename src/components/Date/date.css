@@ -1,0 +1,53 @@
+/* Main style for the date component */
+
+.date {
+  padding: 0.2em 0.8em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+  font-size: 20px;
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* Change of color , font style */
+
+.day {
+  color: #28a49a;
+  font-weight: 700;
+}
+
+/* Change of color , font style */
+
+.month {
+  color: gray;
+}
+
+/* Date & Month separator */
+
+.date::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: gray;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Primary date calendar style with a background*/
+
+.date.primary {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Secondary date calendar style with a transparent background*/
+
+.date.secondary {
+  background-color: transparent;
+  box-shadow: none;
+}

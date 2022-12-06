@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+// Remove underline links
+
+a {
+  text-decoration: none;
+}
+
+// Main style for the event card
+
+.card {
+  margin-top: 10px;
+  width: 450px;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    a > h1 {
+      color: #28a49a;
+    }
+  }
+}
+
+// Increased the font of the emoji
+
+.emoji {
+  font-size: 2rem;
+  align-self: flex-start;
+}
+
+// Alignement of the event items
+
+.card__container {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  gap: 15px;
+  padding: 10px;
+}
+
+.addr__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.date__container {
+  align-self: flex-start;
+}

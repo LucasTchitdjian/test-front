@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import css from "./index.module.scss";
+// import css from "./index.module.scss";
+import './title.css'
 
-class Title extends Component {
-  render() {
-    return(
-      <h1 className={`${css.title}`}>{this.props.children}</h1>
-    )
-  }
+
+export const Title = ({ text, textclass, url }) => {
+
+  return (
+    <a href={url}>
+      <h1 className={textclass}>{text}</h1>
+    </a>
+  )
 }
 
-Title.propTypes = {};
-Title.defaultProps = {};
+
+Title.propTypes = {
+  text: PropTypes.string.isRequired,
+  class: PropTypes.string,
+  url: PropTypes.string,
+};
+Title.defaultProps = {
+  title: "le Printemps des Jardiniers",
+};
 
 export default Title;
