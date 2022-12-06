@@ -8,7 +8,7 @@ import './date.css';
 export const Date = ({ primary, day, month }) => {
   const mode = primary ? 'primary' : 'secondary'; // Choose between primary = date with a background or secondary date with transparent background
   return (
-    <div className={['date', mode].join(' ')}><div className="day">{day}</div><div className="month">{month}</div></div> // Printing the date of an event
+    <div className={['date', mode].join(' ')}><div className="month">{month}</div><div className="day">{day}</div></div> // Printing the date of an event
   )
 };
 

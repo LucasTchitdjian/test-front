@@ -14,14 +14,14 @@ const Template = (args) => <Adresse {...args}><FontAwesomeIcon icon={faMapMarker
 
 export const AdressTextGray = Template.bind({});
 AdressTextGray.args = {
-  place: 'Domaine de la Grange - la Prévôté',
+  place: '',
   icon: <FontAwesomeIcon icon={faMapMarker} />,
   primary: true,
 };
 
 export const AdressTextWhite = Template.bind({});
 AdressTextWhite.args = {
-  place: 'Domaine de la Grange - la Prévôté',
+  place: '',
   icon: <FontAwesomeIcon icon={faMapMarker} />,
   primary: false,
 };

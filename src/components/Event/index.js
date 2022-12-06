@@ -7,24 +7,36 @@ import { Date } from '../Date';
 import { Adresse } from '../Adresse';
 import { Title } from "../Title";
 
+import Events from '../../mocks/events.json'
 
-export const Event = ({ emoji, title, url, day, month }) => {
+
+export const Event = ({ }) => {
+
 
   return (
-    <a href={url}>
-      <div className={css.card}>
-        <div className={css.card__container}>
-          <span className={css.date__container}>
-            <Date day={day} month={month} />
-          </span>
-          <span className={css.emoji}>{emoji}</span>
-          <div className={css.addr__container}>
-            <Title text={title} textclass="subText" />
-            <Adresse primary="true" place="Domaine de la Grange - la Prévôté" />
-          </div>
-        </div>
-      </div>
-    </a>
+    <div className="event">
+      {Events.map((event) => {
+        {
+          const [jour, mois, annee] = event.date.split('/');
+          return (
+            <div className={css.card}>
+              <a href={event.url}>
+                <div className={css.card__container}>
+                  <span className={css.date__container}>
+                    <Date day={jour} month={mois} />
+                  </span>
+                  <span className={css.emoji}>{event.icon}</span>
+                  <div className={css.addr__container}>
+                    <Title text={event.title} textclass="subText" />
+                    <Adresse primary="true" place={Events[0].address.place} />
+                  </div>
+                </div>
+              </a>
+            </div>
+          )
+        }
+      })}
+    </div>
   )
 };
 

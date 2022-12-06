@@ -7,6 +7,8 @@ import Title from '../Title'
 // import css from "./index.module.scss";
 import './pane.css'
 
+import Events from '../../mocks/events.json'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Date } from "../Date";
@@ -15,6 +17,7 @@ import { Event } from "../Event";
 
 
 export const Pane = ({ cover }) => {
+  const [jour, mois, annee] = Events[0].date.split('/');
   return (
     <div className="main">
       <div className="pane" style={{ background: "linear-gradient(to bottom, rgba(220, 220, 220, 0.1), rgba(86, 97, 90, 0.93)), url(" + cover + ")", backgroundSize: "cover" }}>
@@ -23,20 +26,16 @@ export const Pane = ({ cover }) => {
             <div className="leftContainer">
               <Date
                 primary="true"
-                day="05"
-                month="03"
-              />
+                day={jour}
+                month={mois} />
               <Title
                 textclass="mainText"
-                text="Le Primtemps des Jardiniers"
-                url='https://www.savigny-le-temple.fr/domaine-grange-prevote/printemps-jardiniers'
-              />
-            </div>
-            <Adresse />
+                text="Printemps des jardiniers" />
+            </div><Adresse />
           </div>
           <div className="right">
             <Button
-              url="https://www.savigny-le-temple.fr/domaine-grange-prevote/printemps-jardiniers"
+              url={Events[0].url}
               primary="true"
               size="sm"
               label={<FontAwesomeIcon
@@ -46,19 +45,7 @@ export const Pane = ({ cover }) => {
           </div>
         </div>
       </div>
-      <Event
-        day="24"
-        month="03"
-        emoji="🐝"
-        title="Conférence sur le frelon asiatique"
-        url="https://www.savigny-le-temple.fr/content/attention-aux-frelons-asiatiques"
-      />
-      <Event
-        day="29"
-        emoji="🙆"
-        title="L'entrepreneuriat au féminin"
-        url="https://www.savigny-le-temple.fr/content/les-femmes-unies-senart-fus"
-      />
+      <Event />
     </div>
   );
 };
